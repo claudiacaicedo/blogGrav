@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/config/site.yaml',
-    'modified' => 1559599495,
+    'modified' => 1559760897,
     'data' => [
         'title' => 'Receptar',
-        'description' => 'A very delicious blog.',
+        'description' => 'Graficación & Animación',
         'author' => [
             'name' => 'Grav',
             'email' => 'joe@test.com',
@@ -40,36 +40,24 @@ return [
                 'url' => 'http://www.twitter.com/getgrav'
             ],
             2 => [
-                'text' => 'google-plus',
-                'url' => 'http://www.plus.google.com/getgrav'
-            ],
-            3 => [
-                'text' => 'linkedin',
-                'url' => 'http://www.linkedin.com/getgrav'
-            ],
-            4 => [
                 'text' => 'youtube-play',
                 'url' => 'http://www.youtube.com/getgrav'
-            ],
-            5 => [
-                'text' => 'home',
-                'url' => 'http://www.getgrav.org'
             ]
         ],
         'slider' => [
             0 => [
                 'image' => 'slide3.jpg',
-                'title' => 'A very delicious blog',
+                'title' => 'Graficación & Animación',
                 'url' => '#'
             ],
             1 => [
                 'image' => 'slide1.jpg',
-                'title' => 'Duis autem',
+                'title' => 'Html, CSS y JavaScript',
                 'url' => '#'
             ],
             2 => [
                 'image' => 'slide2.jpg',
-                'title' => 'Pumpkin recipe',
+                'title' => 'Docker',
                 'url' => '#'
             ]
         ],
@@ -78,7 +66,6 @@ return [
                 'url' => 'error',
                 'text' => 'Error Page'
             ]
-        ],
-        'copyright' => 'Designed and developed by <a title="WebMan WordPress Themes" href="http://www.webmandesign.eu/"><strong>WebMan Design</strong></a>, Ported By <a href="http://www.getgrav.org" rel="dofollow" target="_blank" title="Grav">Grav Team</a>'
+        ]
     ]
 ];

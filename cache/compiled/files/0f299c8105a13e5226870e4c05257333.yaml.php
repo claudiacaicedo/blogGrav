@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/themes/receptar/blueprints.yaml',
-    'modified' => 1559599495,
+    'modified' => 1559760897,
     'data' => [
         'name' => 'Receptar',
         'version' => '1.3.0',

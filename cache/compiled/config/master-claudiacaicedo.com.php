@@ -1,137 +1,137 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1559600570,
-    'checksum' => '0efae9d439e6eb8eb0189e1e5970e599',
+    'timestamp' => 1559761225,
+    'checksum' => 'ded7ea5a10e7724e072e01c0a9c11d23',
     'files' => [
         'user/config' => [
             'backups' => [
                 'file' => 'user/config/backups.yaml',
-                'modified' => 1559600477
+                'modified' => 1559760897
             ],
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1559600477
+                'modified' => 1559760897
             ],
             'plugins/archives' => [
                 'file' => 'user/config/plugins/archives.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/email' => [
                 'file' => 'user/config/plugins/email.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/jscomments' => [
                 'file' => 'user/config/plugins/jscomments.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/relatedpages' => [
                 'file' => 'user/config/plugins/relatedpages.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/config/plugins/simplesearch.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
-                'modified' => 1559600477
+                'modified' => 1559760897
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1559600477
+                'modified' => 1559760897
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1559600465
+                'modified' => 1559760897
             ]
         ],
         'system/config' => [
             'backups' => [
                 'file' => 'system/config/backups.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1559600465
+                'modified' => 1559760897
             ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/pagination.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/feed' => [
                 'file' => 'user/plugins/feed/feed.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/simplesearch.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/comments' => [
                 'file' => 'user/plugins/comments/comments.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/taxonomylist' => [
                 'file' => 'user/plugins/taxonomylist/taxonomylist.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/archives' => [
                 'file' => 'user/plugins/archives/archives.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/relatedpages' => [
                 'file' => 'user/plugins/relatedpages/relatedpages.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1559599495
+                'modified' => 1559760897
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1559600464
+                'modified' => 1559760897
             ]
         ]
     ],
@@ -913,7 +913,7 @@ node_modules'
             'blog' => [
                 'route' => ''
             ],
-            'description' => 'Graficación & Animación.',
+            'description' => 'Graficación & Animación',
             'global_featured_image' => 'featured.jpg',
             'social' => [
                 0 => [
@@ -925,36 +925,24 @@ node_modules'
                     'url' => 'http://www.twitter.com/getgrav'
                 ],
                 2 => [
-                    'text' => 'google-plus',
-                    'url' => 'http://www.plus.google.com/getgrav'
-                ],
-                3 => [
-                    'text' => 'linkedin',
-                    'url' => 'http://www.linkedin.com/getgrav'
-                ],
-                4 => [
                     'text' => 'youtube-play',
                     'url' => 'http://www.youtube.com/getgrav'
-                ],
-                5 => [
-                    'text' => 'home',
-                    'url' => 'http://www.getgrav.org'
                 ]
             ],
             'slider' => [
                 0 => [
                     'image' => 'slide3.jpg',
-                    'title' => 'A very delicious blog',
+                    'title' => 'Graficación & Animación',
                     'url' => '#'
                 ],
                 1 => [
                     'image' => 'slide1.jpg',
-                    'title' => 'Duis autem',
+                    'title' => 'Html, CSS y JavaScript',
                     'url' => '#'
                 ],
                 2 => [
                     'image' => 'slide2.jpg',
-                    'title' => 'Pumpkin recipe',
+                    'title' => 'Docker',
                     'url' => '#'
                 ]
             ],
@@ -963,8 +951,7 @@ node_modules'
                     'url' => 'error',
                     'text' => 'Error Page'
                 ]
-            ],
-            'copyright' => 'Designed and developed by <a title="WebMan WordPress Themes" href="http://www.webmandesign.eu/"><strong>WebMan Design</strong></a>, Ported By <a href="http://www.getgrav.org" rel="dofollow" target="_blank" title="Grav">Grav Team</a>'
+            ]
         ],
         'streams' => [
             'schemes' => [

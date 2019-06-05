@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/themes/receptar/languages.yaml',
-    'modified' => 1559599495,
+    'modified' => 1559760897,
     'data' => [
         'en' => [
             'SITE' => [
@@ -113,7 +113,16 @@ return [
                 5 => 'Sábado',
                 6 => 'Domingo'
             ],
-            'READ_MORE' => 'Leer Más'
+            'READ_MORE' => 'Leer Más',
+            'SEARCH' => 'Búsqueda',
+            'RANDOM_ARTICLE' => 'Artículos Random',
+            'POPULAR_TAGS' => 'Etiquetas populares',
+            'LATEST_RECIPES' => 'últimos Artículos',
+            'RELATED_POSTS' => 'Relacionados',
+            'SEARCH_FIELD' => 'Escribe y presiona ENTER',
+            'NEXT' => 'Sig.',
+            'PREVIOUS' => 'Atrás',
+            'TOPICS' => 'Temas'
         ],
         'cs' => [
             'SITE' => [

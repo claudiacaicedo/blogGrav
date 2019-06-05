@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/config/system.yaml',
-    'modified' => 1559600465,
+    'modified' => 1559760897,
     'data' => [
         'home' => [
             'alias' => '/blog'

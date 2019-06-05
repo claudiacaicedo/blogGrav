@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/admin/languages/lt.yaml',
-    'modified' => 1559600465,
+    'modified' => 1559760897,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Tai Grav administravimo įskiepio beta versija! Naudokite atsargiai...',
