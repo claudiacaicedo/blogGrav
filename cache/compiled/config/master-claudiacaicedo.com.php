@@ -913,7 +913,7 @@ node_modules'
             'blog' => [
                 'route' => ''
             ],
-            'description' => 'A very delicious blog.',
+            'description' => 'Graficación & Animación.',
             'global_featured_image' => 'featured.jpg',
             'social' => [
                 0 => [

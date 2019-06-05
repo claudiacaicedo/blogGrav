@@ -4,8 +4,8 @@ form:
     name: my-nice-form
     fields:
         - name: name
-          label: Name
-          placeholder: Enter your name
+          label: Hombre
+          placeholder: Ingresa tu nombre
           autofocus: on
           autocomplete: on
           type: text
@@ -14,16 +14,16 @@ form:
 
         - name: email
           label: Email
-          placeholder: Enter your email address
+          placeholder: Ingresa tu email
           type: text
           validate:
             rule: email
             required: true
 
         - name: message
-          label: Message
+          label: Mensaje
           size: long
-          placeholder: Enter your message
+          placeholder: Exprésate...
           type: textarea
           validate:
             required: true

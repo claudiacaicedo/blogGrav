@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://comments/comments.yaml',
-    'modified' => 1559599495,
+    'modified' => 1559749152,
     'data' => [
         'enabled' => true,
         'enable_on_routes' => [

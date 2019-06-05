@@ -30,18 +30,27 @@ el:
   MONTHS_OF_THE_YEAR: [Ιανουάριος, Φεβρουάριος, Μάρτιος, Απρίλιος, Μάιος, Ιούνιος, Ιούλιος, Αύγουστος, Σεπτέμβριος, Οκτώβριος, Νοέμβριος, Δεκέμβριος]
   DAYS_OF_THE_WEEK: [Δευτέρα, Τρλιτη, Τετάρτη, Πέμπτη, Παρασκευή, Σαββάτο, Κυριακή]
   READ_MORE: Διαβάστε περισσότερα
-
+  
 es:
   SITE:
-    TITLE: Mi Blog
-    DESCRIPTION: Blogeando sobre cosas
-    COPYRIGHT: © Copyright %s Tu Compañía
+    TITLE: G&A
+    DESCRIPTION: Un blog dedicado a esta interesante materia.
+    COPYRIGHT: © Copyright %s G&A
   SUBSCRIBE: Suscribir
   TWEET: Twittear
   SHARE: Compartir
   MONTHS_OF_THE_YEAR: [Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Augosto, Septiembre, Octubre, Noviembre, Diciembre]
   DAYS_OF_THE_WEEK: [Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo]
   READ_MORE: Leer Más
+  SEARCH: Búsqueda
+  RANDOM_ARTICLE: Artículos Random 
+  POPULAR_TAGS: Etiquetas populares
+  LATEST_RECIPES: últimos Artículos
+  RELATED_POSTS: Relacionados
+  SEARCH_FIELD: Escribe y presiona ENTER
+  NEXT: Sig.
+  PREVIOUS: Atrás
+  TOPICS: Temas
 
 cs:
   SITE:

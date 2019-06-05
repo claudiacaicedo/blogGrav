@@ -1,10 +1,10 @@
 ---
-title: About
+title: Acerca de Graficación y Animación
 taxonomy:
     category: sidebar
 css_suffix: widget_text
 ---
 
-Receptar is simple, modern, responsive, high-DPI, fully customizable blog Grav theme. It features split-screen book-like design inspired by a modern cook book with emphasize on beautiful imagery and typography.
+Es una asignatura impartida en el 6to Semestre la carrera de Ingeniería en Sistemas de la Puce-Esmeraldas.
 
-More info at [getgrav.org](getgrav.org).
+Este blog fue realizado de manera específica para esta materia y en el se pondran encontrar artículos relcionados con los difentes temas que iremos tocando durante el transcurso del semestre..

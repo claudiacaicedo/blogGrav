@@ -83,9 +83,9 @@ return [
         ],
         'es' => [
             'SITE' => [
-                'TITLE' => 'Mi Blog',
-                'DESCRIPTION' => 'Blogeando sobre cosas',
-                'COPYRIGHT' => '© Copyright %s Tu Compañía'
+                'TITLE' => 'G&A',
+                'DESCRIPTION' => 'Un blog dedicado a esta interesante materia.',
+                'COPYRIGHT' => '© Copyright %s G&A'
             ],
             'SUBSCRIBE' => 'Suscribir',
             'TWEET' => 'Twittear',
