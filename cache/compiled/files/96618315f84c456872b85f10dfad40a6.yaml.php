@@ -2,33 +2,36 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/config/site.yaml',
-    'modified' => 1559760897,
+    'modified' => 1559765319,
     'data' => [
-        'title' => 'Receptar',
-        'description' => 'Graficación & Animación',
+        'title' => 'Graficación & Animación',
+        'default_lang' => 'es',
         'author' => [
-            'name' => 'Grav',
-            'email' => 'joe@test.com',
+            'name' => 'Claudia Caicedo',
+            'email' => 'claudia.sce@gmail.com',
             'url' => 'http://getgrav.org/',
-            'logo' => NULL,
             'gravatar' => 'contact@getgrav.org',
             'description' => 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
-        ],
-        'blog' => [
-            'route' => ''
-        ],
-        'metadata' => [
-            'description' => 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
         ],
         'taxonomies' => [
             0 => 'category',
             1 => 'tag',
             2 => 'month'
         ],
+        'metadata' => [
+            'description' => 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
+        ],
         'summary' => [
+            'enabled' => true,
+            'format' => 'short',
             'size' => 100,
+            'delimiter' => '===',
             'striptags' => true
         ],
+        'blog' => [
+            'route' => ''
+        ],
+        'description' => 'Graficación & Animación',
         'global_featured_image' => 'featured.jpg',
         'social' => [
             0 => [

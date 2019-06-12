@@ -1,46 +1,51 @@
-title: Receptar
-description: "Graficación & Animación"
+title: 'Graficación & Animación'
+default_lang: es
 author:
-  name: Grav
-  email: 'joe@test.com'
-  url: http://getgrav.org/
-  logo:
+  name: 'Claudia Caicedo'
+  email: claudia.sce@gmail.com
+  url: 'http://getgrav.org/'
   gravatar: contact@getgrav.org
-  description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
+  description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
+taxonomies:
+  - category
+  - tag
+  - month
+metadata:
+  description: 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
+summary:
+  enabled: true
+  format: short
+  size: 100
+  delimiter: '==='
+  striptags: true
 blog:
   route: ''
-metadata:
-    description: 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
-taxonomies: [category,tag,month]
-
-summary:
-  size: 100
-  striptags: true
-
-# Image must be uploaded to your theme /images/ directory.
+description: 'Graficación & Animación'
 global_featured_image: featured.jpg
-
 social:
-  - text: facebook
-    url: "http://www.facebook.com/getgrav"
-  - text: twitter
-    url: "http://www.twitter.com/getgrav"
-  - text: youtube-play
-    url: "http://www.youtube.com/getgrav"
-    
+  -
+    text: facebook
+    url: 'http://www.facebook.com/getgrav'
+  -
+    text: twitter
+    url: 'http://www.twitter.com/getgrav'
+  -
+    text: youtube-play
+    url: 'http://www.youtube.com/getgrav'
 slider:
-  - image: slide3.jpg
-    title: Graficación & Animación
-    url: "#"
-  - image: slide1.jpg
-    title: Html, CSS y JavaScript
-    url: "#"
-  - image: slide2.jpg
+  -
+    image: slide3.jpg
+    title: 'Graficación & Animación'
+    url: '#'
+  -
+    image: slide1.jpg
+    title: 'Html, CSS y JavaScript'
+    url: '#'
+  -
+    image: slide2.jpg
     title: Docker
-    url: "#"
-
+    url: '#'
 menu:
-  - url: error
-    text: Error Page
-
-
+  -
+    url: error
+    text: 'Error Page'

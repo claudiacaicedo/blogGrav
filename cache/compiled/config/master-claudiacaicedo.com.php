@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1559761225,
-    'checksum' => 'ded7ea5a10e7724e072e01c0a9c11d23',
+    'timestamp' => 1559765319,
+    'checksum' => '8d24235d9fc4f7bbda3473ec633b27f7',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -43,7 +43,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1559760897
+                'modified' => 1559765319
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -51,7 +51,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1559760897
+                'modified' => 1559765246
             ]
         ],
         'system/config' => [
@@ -883,13 +883,12 @@ node_modules'
             'salt' => '1Cy42se3DSVIXP'
         ],
         'site' => [
-            'title' => 'Receptar',
-            'default_lang' => 'en',
+            'title' => 'Graficación & Animación',
+            'default_lang' => 'es',
             'author' => [
-                'name' => 'Grav',
-                'email' => 'joe@test.com',
+                'name' => 'Claudia Caicedo',
+                'email' => 'claudia.sce@gmail.com',
                 'url' => 'http://getgrav.org/',
-                'logo' => NULL,
                 'gravatar' => 'contact@getgrav.org',
                 'description' => 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
             ],
@@ -978,7 +977,7 @@ node_modules'
         ],
         'system' => [
             'absolute_urls' => false,
-            'timezone' => '',
+            'timezone' => 'America/Bogota',
             'default_locale' => NULL,
             'param_sep' => ':',
             'wrapped_site' => false,
@@ -1033,14 +1032,14 @@ node_modules'
                     'count' => 20
                 ],
                 'dateformat' => [
-                    'default' => NULL,
+                    'default' => 'H:i d-m-Y',
                     'short' => 'jS M Y',
                     'long' => 'F jS \\a\\t g:ia'
                 ],
                 'publish_dates' => true,
                 'process' => [
                     'markdown' => true,
-                    'twig' => false
+                    'twig' => true
                 ],
                 'twig_first' => false,
                 'never_cache_twig' => false,
@@ -1074,7 +1073,7 @@ node_modules'
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 302,
+                'redirect_default_code' => '302',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -1171,7 +1170,8 @@ node_modules'
                 'allowed_fallback_types' => [
                     
                 ],
-                'auto_metadata_exif' => false
+                'auto_metadata_exif' => false,
+                'upload_limit' => 8388608
             ],
             'session' => [
                 'enabled' => true,
