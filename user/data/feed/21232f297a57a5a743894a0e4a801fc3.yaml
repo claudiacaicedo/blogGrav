@@ -1,4 +1,4 @@
-last_checked: 1559769154
+last_checked: 1560374951
 data:
   -
     title: 'Grav 1.6 Released!'
@@ -14,7 +14,7 @@ data:
     title: 'All RocketTheme Grav Themes 50% Off for Black Friday'
     url: 'https://getgrav.org/blog/rockettheme-blackfriday-2018'
     date: 1542790800
-    nicetime: '6 meses antes'
+    nicetime: '7 meses antes'
   -
     title: 'We''re Moving Chat from Slack to Discord'
     url: 'https://getgrav.org/blog/chat-moving-to-discord'
@@ -44,9 +44,9 @@ data:
     title: 'macOS 10.14 Mojave Apache Setup: Upgrading Homebrew'
     url: 'https://getgrav.org/blog/macos-mojave-apache-upgrade-homebrew'
     date: 1537876800
-    nicetime: '8 meses antes'
+    nicetime: '9 meses antes'
   -
     title: 'macOS 10.14 Mojave Apache Setup: SSL'
     url: 'https://getgrav.org/blog/macos-mojave-apache-ssl'
     date: 1537873380
-    nicetime: '8 meses antes'
+    nicetime: '9 meses antes'
