@@ -20,7 +20,9 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
 
         $this->blocks = [
             'input' => [$this, 'block_input'],
+            'prepend' => [$this, 'block_prepend'],
             'input_attributes' => [$this, 'block_input_attributes'],
+            'append' => [$this, 'block_append'],
         ];
     }
 
@@ -47,28 +49,55 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
         echo " ";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "wrapper_classes", []), "html", null, true);
         echo "\">
-        <textarea
+        ";
+        // line 5
+        $this->displayBlock('prepend', $context, $blocks);
+        // line 6
+        echo "        <textarea
             ";
-        // line 7
+        // line 8
         echo "            name=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\TwigExtension')->fieldNameFilter((($context["scope"] ?? null) . $this->getAttribute(($context["field"] ?? null), "name", []))), "html", null, true);
         echo "\"
             ";
-        // line 9
+        // line 10
         echo "            ";
         $this->displayBlock('input_attributes', $context, $blocks);
-        // line 32
+        // line 33
         echo "            >";
         echo twig_escape_filter($this->env, twig_trim_filter(($context["value"] ?? null)), "html");
         echo "</textarea>
-    </div>
+            ";
+        // line 34
+        $this->displayBlock('append', $context, $blocks);
+        // line 35
+        echo "            ";
+        if ((($context["inline_errors"] ?? null) && ($context["errors"] ?? null))) {
+            // line 36
+            echo "                <div class=\"";
+            ((($context["form_errors_classes"] ?? null)) ? (print (twig_escape_filter($this->env, ($context["form_errors_classes"] ?? null), "html", null, true))) : (print ("form-errors")));
+            echo "\">
+                    <p class=\"form-message\"><i class=\"fa fa-exclamation-circle\"></i> ";
+            // line 37
+            echo twig_escape_filter($this->env, twig_first($this->env, ($context["errors"] ?? null)), "html", null, true);
+            echo "</p>
+                </div>
+            ";
+        }
+        // line 40
+        echo "    </div>
 ";
     }
 
-    // line 9
+    // line 5
+    public function block_prepend($context, array $blocks = [])
+    {
+    }
+
+    // line 10
     public function block_input_attributes($context, array $blocks = [])
     {
-        // line 10
+        // line 11
         echo "                class=\"";
         echo twig_escape_filter($this->env, ($context["form_field_textarea_classes"] ?? null), "html", null, true);
         echo " ";
@@ -77,109 +106,109 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
         echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "size", []), "html", null, true);
         echo "\"
                 ";
-        // line 11
+        // line 12
         if ($this->getAttribute(($context["field"] ?? null), "id", [], "any", true, true)) {
             echo "id=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "id", []));
             echo "\" ";
         }
-        // line 12
+        // line 13
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "style", [], "any", true, true)) {
             echo "style=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "style", []));
             echo "\" ";
         }
-        // line 13
+        // line 14
         echo "                ";
         if (($this->getAttribute(($context["field"] ?? null), "disabled", []) || ($context["isDisabledToggleable"] ?? null))) {
             echo "disabled=\"disabled\"";
         }
-        // line 14
+        // line 15
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "placeholder", [])) {
             echo "placeholder=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\TwigExtension')->translate($this->env, $this->getAttribute(($context["field"] ?? null), "placeholder", [])), "html", null, true);
             echo "\"";
         }
-        // line 15
+        // line 16
         echo "                ";
         if (twig_in_filter($this->getAttribute(($context["field"] ?? null), "autofocus", []), [0 => "on", 1 => "true", 2 => 1])) {
             echo "autofocus=\"autofocus\"";
         }
-        // line 16
+        // line 17
         echo "                ";
         if (twig_in_filter($this->getAttribute(($context["field"] ?? null), "novalidate", []), [0 => "on", 1 => "true", 2 => 1])) {
             echo "novalidate=\"novalidate\"";
         }
-        // line 17
+        // line 18
         echo "                ";
         if (twig_in_filter($this->getAttribute(($context["field"] ?? null), "readonly", []), [0 => "on", 1 => "true", 2 => 1])) {
             echo "readonly=\"readonly\"";
         }
-        // line 18
+        // line 19
         echo "                ";
         if (twig_in_filter($this->getAttribute(($context["field"] ?? null), "autocomplete", []), [0 => "on", 1 => "off"])) {
             echo "autocomplete=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "autocomplete", []), "html", null, true);
             echo "\"";
         }
-        // line 19
+        // line 20
         echo "                ";
         if (($context["required"] ?? null)) {
             echo "required=\"required\"";
         }
-        // line 20
+        // line 21
         echo "                ";
         if ($this->getAttribute($this->getAttribute(($context["field"] ?? null), "validate", []), "pattern", [])) {
             echo "pattern=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["field"] ?? null), "validate", []), "pattern", []), "html", null, true);
             echo "\"";
         }
-        // line 21
+        // line 22
         echo "                ";
         if ($this->getAttribute($this->getAttribute(($context["field"] ?? null), "validate", []), "message", [])) {
             echo "title=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\TwigExtension')->translate($this->env, $this->getAttribute($this->getAttribute(($context["field"] ?? null), "validate", []), "message", [])));
             echo "\"";
         }
-        // line 22
+        // line 23
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "rows", [], "any", true, true)) {
             echo "rows=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "rows", []), "html", null, true);
             echo "\"";
         }
-        // line 23
+        // line 24
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "cols", [], "any", true, true)) {
             echo "cols=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "cols", []), "html", null, true);
             echo "\"";
         }
-        // line 24
+        // line 25
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "minlength", [], "any", true, true)) {
             echo "minlength=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "minlength", []), "html", null, true);
             echo "\"";
         }
-        // line 25
+        // line 26
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "maxlength", [], "any", true, true)) {
             echo "maxlength=\"";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["field"] ?? null), "maxlength", []), "html", null, true);
             echo "\"";
         }
-        // line 26
+        // line 27
         echo "                ";
         if ($this->getAttribute(($context["field"] ?? null), "datasets", [])) {
-            // line 27
+            // line 28
             echo "                    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["field"] ?? null), "datasets", []));
             foreach ($context['_seq'] as $context["datakey"] => $context["datavalue"]) {
-                // line 28
+                // line 29
                 echo "                        data-";
                 echo twig_escape_filter($this->env, $context["datakey"], "html", null, true);
                 echo "=\"";
@@ -190,11 +219,16 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['datakey'], $context['datavalue'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 30
+            // line 31
             echo "                ";
         }
-        // line 31
+        // line 32
         echo "            ";
+    }
+
+    // line 34
+    public function block_append($context, array $blocks = [])
+    {
     }
 
     public function getTemplateName()
@@ -209,7 +243,7 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
 
     public function getDebugInfo()
     {
-        return array (  197 => 31,  194 => 30,  183 => 28,  178 => 27,  175 => 26,  168 => 25,  161 => 24,  154 => 23,  147 => 22,  140 => 21,  133 => 20,  128 => 19,  121 => 18,  116 => 17,  111 => 16,  106 => 15,  99 => 14,  94 => 13,  87 => 12,  81 => 11,  72 => 10,  69 => 9,  61 => 32,  58 => 9,  53 => 7,  43 => 4,  40 => 3,  30 => 1,);
+        return array (  230 => 34,  226 => 32,  223 => 31,  212 => 29,  207 => 28,  204 => 27,  197 => 26,  190 => 25,  183 => 24,  176 => 23,  169 => 22,  162 => 21,  157 => 20,  150 => 19,  145 => 18,  140 => 17,  135 => 16,  128 => 15,  123 => 14,  116 => 13,  110 => 12,  101 => 11,  98 => 10,  93 => 5,  88 => 40,  82 => 37,  77 => 36,  74 => 35,  72 => 34,  67 => 33,  64 => 10,  59 => 8,  56 => 6,  54 => 5,  45 => 4,  42 => 3,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -226,6 +260,7 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
 
 {% block input %}
     <div class=\"{{ form_field_wrapper_classes ?: 'form-textarea-wrapper' }} {{ field.size }} {{ field.wrapper_classes }}\">
+        {% block prepend %}{% endblock prepend %}
         <textarea
             {# required attribute structures #}
             name=\"{{ (scope ~ field.name)|fieldName }}\"
@@ -254,6 +289,12 @@ class __TwigTemplate_ed8f6c0e2db4e8973d6b01306af35867e2dee36d5bd495e11a13e342ba0
                 {% endif %}
             {% endblock %}
             >{{ value|trim|e('html') }}</textarea>
+            {% block append %}{% endblock append %}
+            {% if inline_errors and errors %}
+                <div class=\"{{ form_errors_classes ?: 'form-errors' }}\">
+                    <p class=\"form-message\"><i class=\"fa fa-exclamation-circle\"></i> {{ errors|first }}</p>
+                </div>
+            {% endif %}
     </div>
 {% endblock %}
 ", "forms/fields/textarea/textarea.html.twig", "/usr/share/nginx/html/user/plugins/form/templates/forms/fields/textarea/textarea.html.twig");

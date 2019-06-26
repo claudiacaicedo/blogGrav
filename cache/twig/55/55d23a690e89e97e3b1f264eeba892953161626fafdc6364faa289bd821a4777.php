@@ -86,7 +86,7 @@ class __TwigTemplate_c403b2bcc1a9064303b9b2aff5587f03c25fa42a0f71252cabdfe3ad2c0
         echo "
 ";
         // line 20
-        $context["action"] = (($this->getAttribute(($context["form"] ?? null), "action", [])) ? ((($context["base_url"] ?? null) . $this->getAttribute(($context["form"] ?? null), "action", []))) : (((($context["base_url"] ?? null) . $this->getAttribute(($context["page"] ?? null), "route", [])) . $this->getAttribute(($context["uri"] ?? null), "params", []))));
+        $context["action"] = $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc((($this->getAttribute(($context["form"] ?? null), "action", [])) ? ($this->getAttribute(($context["form"] ?? null), "action", [])) : (($this->getAttribute(($context["page"] ?? null), "route", []) . $this->getAttribute(($context["uri"] ?? null), "params", [])))));
         // line 21
         echo "
 ";
@@ -552,7 +552,7 @@ class __TwigTemplate_c403b2bcc1a9064303b9b2aff5587f03c25fa42a0f71252cabdfe3ad2c0
     {% endif %}
 {% endfor %}
 
-{% set action = form.action ? base_url ~ form.action : base_url ~ page.route ~ uri.params %}
+{% set action = url(form.action ?: page.route ~ uri.params) %}
 
 {% if (action == base_url_relative) %}
     {% set action = base_url_relative ~ '/' ~ page.slug %}

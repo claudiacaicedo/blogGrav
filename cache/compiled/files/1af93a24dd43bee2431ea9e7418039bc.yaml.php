@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/themes/receptar/languages.yaml',
-    'modified' => 1559760897,
+    'modified' => 1560796275,
     'data' => [
         'en' => [
             'SITE' => [

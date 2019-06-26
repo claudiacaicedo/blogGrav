@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/comments/comments.yaml',
-    'modified' => 1559760897,
+    'modified' => 1560796275,
     'data' => [
         'enabled' => true,
         'enable_on_routes' => [

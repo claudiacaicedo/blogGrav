@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/admin/blueprints/config/media.yaml',
-    'modified' => 1559760897,
+    'modified' => 1561571065,
     'data' => [
         'title' => 'PLUGIN_ADMIN.MEDIA',
         'form' => [

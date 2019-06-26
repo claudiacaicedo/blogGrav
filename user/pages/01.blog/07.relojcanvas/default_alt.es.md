@@ -3,7 +3,7 @@ title: 'Reloj Invertido Canvas'
 media_order: reloj-pared-oj-mini-nomon.jpg
 ---
 
-Entre a la página W3School y realice el ejercicio del reloj en 
+Entre a la página W3School y realice el ejercicio del reloj pero de forma invertida
 
 
 <div>

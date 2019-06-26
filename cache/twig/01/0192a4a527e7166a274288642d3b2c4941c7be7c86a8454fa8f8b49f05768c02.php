@@ -61,14 +61,13 @@ class __TwigTemplate_94479ffa39808fb2eebaaa6c634cc60818bdabc64ad0c3ac51d160b4080
             // line 15
             echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Plugin\Admin\Twig\AdminTwigExtension')->tuFilter("PLUGIN_ADMIN.BACKUPS_NOT_GENERATED"), "html", null, true);
             echo "</td>
-
         </tr>
     ";
         } else {
-            // line 19
+            // line 18
             echo "        ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["backups"] ?? null));
+            $context['_seq'] = twig_ensure_traversable((((isset($context["backups"]) || array_key_exists("backups", $context))) ? (_twig_default_filter(($context["backups"] ?? null), [])) : ([])));
             $context['loop'] = [
               'parent' => $context['_parent'],
               'index0' => 0,
@@ -83,37 +82,37 @@ class __TwigTemplate_94479ffa39808fb2eebaaa6c634cc60818bdabc64ad0c3ac51d160b4080
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["backup"]) {
-                // line 20
+                // line 19
                 echo "            ";
                 $context["encoded_name"] = twig_urlencode_filter($this->env->getExtension('Grav\Common\Twig\TwigExtension')->base64EncodeFilter($this->getAttribute($context["backup"], "filename", [])));
-                // line 21
+                // line 20
                 echo "            ";
                 $context["backup_delete"] = twig_replace_filter(($context["delete_url"] ?? null), ["%BACKUP_FILE" => ($context["encoded_name"] ?? null)]);
-                // line 22
+                // line 21
                 echo "            <tr>
                 <td>";
-                // line 23
+                // line 22
                 echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", []), "html", null, true);
                 echo "</td>
                 <td> <i class=\"fa fa-clock-o\"></i> ";
-                // line 24
+                // line 23
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["backup"], "date", [])), "html", null, true);
                 echo "</td>
                 <td>";
-                // line 25
+                // line 24
                 echo twig_escape_filter($this->env, $this->getAttribute($context["backup"], "title", []), "html", null, true);
                 echo "</td>
                 <td class=\"right pad\">";
-                // line 26
+                // line 25
                 echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\TwigExtension')->niceFilesizeFunc($this->getAttribute($context["backup"], "size", [])), "html", null, true);
                 echo "</td>
                 <td class=\"right pad nowrap\" >
                     <a class=\"button button-small hint--bottom\" href=\"";
-                // line 28
+                // line 27
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["grav"] ?? null), "backups", []), "getBackupDownloadUrl", [0 => $this->getAttribute($context["backup"], "path", []), 1 => $this->getAttribute(($context["admin"] ?? null), "base", [])], "method"), "html", null, true);
                 echo "\" data-hint=\"Download\"><i class=\"fa fa-download\"></i></a>
                     <span class=\"button button-small danger hint--bottom\" data-hint=\"Delete\" data-backup data-ajax=\"";
-                // line 29
+                // line 28
                 echo twig_escape_filter($this->env, ($context["backup_delete"] ?? null), "html", null, true);
                 echo "\"><i class=\"fa fa-close\"></i></span>
                 </td>
@@ -131,10 +130,10 @@ class __TwigTemplate_94479ffa39808fb2eebaaa6c634cc60818bdabc64ad0c3ac51d160b4080
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['backup'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 33
+            // line 32
             echo "    ";
         }
-        // line 34
+        // line 33
         echo "    </tbody>
 </table>
 ";
@@ -152,7 +151,7 @@ class __TwigTemplate_94479ffa39808fb2eebaaa6c634cc60818bdabc64ad0c3ac51d160b4080
 
     public function getDebugInfo()
     {
-        return array (  138 => 34,  135 => 33,  117 => 29,  113 => 28,  108 => 26,  104 => 25,  100 => 24,  96 => 23,  93 => 22,  90 => 21,  87 => 20,  69 => 19,  62 => 15,  59 => 14,  57 => 13,  50 => 9,  46 => 8,  42 => 7,  38 => 6,  32 => 2,  30 => 1,);
+        return array (  137 => 33,  134 => 32,  116 => 28,  112 => 27,  107 => 25,  103 => 24,  99 => 23,  95 => 22,  92 => 21,  89 => 20,  86 => 19,  68 => 18,  62 => 15,  59 => 14,  57 => 13,  50 => 9,  46 => 8,  42 => 7,  38 => 6,  32 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -180,10 +179,9 @@ class __TwigTemplate_94479ffa39808fb2eebaaa6c634cc60818bdabc64ad0c3ac51d160b4080
     {% if backups|count == 0 %}
         <tr>
             <td colspan=\"5\" class=\"error\" style=\"text-align: center;\">{{ \"PLUGIN_ADMIN.BACKUPS_NOT_GENERATED\"|tu }}</td>
-
         </tr>
     {% else %}
-        {% for backup in backups %}
+        {% for backup in backups|default([]) %}
             {% set encoded_name = backup.filename|base64_encode|url_encode %}
             {% set backup_delete = delete_url|replace({'%BACKUP_FILE': encoded_name}) %}
             <tr>
