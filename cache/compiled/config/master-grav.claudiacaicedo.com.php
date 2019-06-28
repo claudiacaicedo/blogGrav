@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1561573136,
-    'checksum' => '3a85207309988cdf47e26f6f97f7238b',
+    'timestamp' => 1561705558,
+    'checksum' => '531d7e2176d7649003f6ba81ec46b308',
     'files' => [
         'user/config' => [
             'backups' => [
@@ -21,6 +21,10 @@ return [
                 'file' => 'user/config/plugins/email.yaml',
                 'modified' => 1560796275
             ],
+            'plugins/git-sync' => [
+                'file' => 'user/config/plugins/git-sync.yaml',
+                'modified' => 1561704831
+            ],
             'plugins/jscomments' => [
                 'file' => 'user/config/plugins/jscomments.yaml',
                 'modified' => 1560796275
@@ -33,6 +37,10 @@ return [
                 'file' => 'user/config/plugins/simplesearch.yaml',
                 'modified' => 1560796275
             ],
+            'plugins/tntsearch' => [
+                'file' => 'user/config/plugins/tntsearch.yaml',
+                'modified' => 1561704703
+            ],
             'scheduler' => [
                 'file' => 'user/config/scheduler.yaml',
                 'modified' => 1560796275
@@ -43,7 +51,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1560796275
+                'modified' => 1561586983
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -51,15 +59,23 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1561573136
+                'modified' => 1561705444
             ],
             'themes/afterburner2' => [
                 'file' => 'user/config/themes/afterburner2.yaml',
-                'modified' => 1561571185
+                'modified' => 1561705156
             ],
             'themes/casper' => [
                 'file' => 'user/config/themes/casper.yaml',
                 'modified' => 1561572363
+            ],
+            'themes/quark-open-publishing' => [
+                'file' => 'user/config/themes/quark-open-publishing.yaml',
+                'modified' => 1561705041
+            ],
+            'themes/receptar' => [
+                'file' => 'user/config/themes/receptar.yaml',
+                'modified' => 1561705558
             ]
         ],
         'system/config' => [
@@ -93,13 +109,33 @@ return [
                 'file' => 'user/plugins/admin/admin.yaml',
                 'modified' => 1561571065
             ],
+            'plugins/shortcode-core' => [
+                'file' => 'user/plugins/shortcode-core/shortcode-core.yaml',
+                'modified' => 1561704637
+            ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/pagination.yaml',
                 'modified' => 1560796275
             ],
+            'plugins/presentation-deckset' => [
+                'file' => 'user/plugins/presentation-deckset/presentation-deckset.yaml',
+                'modified' => 1561704634
+            ],
             'plugins/feed' => [
                 'file' => 'user/plugins/feed/feed.yaml',
                 'modified' => 1560796275
+            ],
+            'plugins/git-sync' => [
+                'file' => 'user/plugins/git-sync/git-sync.yaml',
+                'modified' => 1561704630
+            ],
+            'plugins/auto-date' => [
+                'file' => 'user/plugins/auto-date/auto-date.yaml',
+                'modified' => 1561704627
+            ],
+            'plugins/presentation' => [
+                'file' => 'user/plugins/presentation/presentation.yaml',
+                'modified' => 1561704633
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/simplesearch.yaml',
@@ -109,17 +145,41 @@ return [
                 'file' => 'user/plugins/readingtime/readingtime.yaml',
                 'modified' => 1561571803
             ],
+            'plugins/external_links' => [
+                'file' => 'user/plugins/external_links/external_links.yaml',
+                'modified' => 1561704629
+            ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
                 'modified' => 1561571066
+            ],
+            'plugins/image-captions' => [
+                'file' => 'user/plugins/image-captions/image-captions.yaml',
+                'modified' => 1561704630
+            ],
+            'plugins/page-inject' => [
+                'file' => 'user/plugins/page-inject/page-inject.yaml',
+                'modified' => 1561704632
             ],
             'plugins/comments' => [
                 'file' => 'user/plugins/comments/comments.yaml',
                 'modified' => 1560796275
             ],
+            'plugins/markdown-notices' => [
+                'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
+                'modified' => 1561704631
+            ],
+            'plugins/shortcode-ui' => [
+                'file' => 'user/plugins/shortcode-ui/shortcode-ui.yaml',
+                'modified' => 1561704637
+            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1560796275
+            ],
+            'plugins/youtube' => [
+                'file' => 'user/plugins/youtube/youtube.yaml',
+                'modified' => 1561704636
             ],
             'plugins/taxonomylist' => [
                 'file' => 'user/plugins/taxonomylist/taxonomylist.yaml',
@@ -133,6 +193,10 @@ return [
                 'file' => 'user/plugins/relatedpages/relatedpages.yaml',
                 'modified' => 1560796275
             ],
+            'plugins/breadcrumbs' => [
+                'file' => 'user/plugins/breadcrumbs/breadcrumbs.yaml',
+                'modified' => 1561704628
+            ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
                 'modified' => 1560796275
@@ -140,6 +204,10 @@ return [
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
                 'modified' => 1560796275
+            ],
+            'plugins/tntsearch' => [
+                'file' => 'user/plugins/tntsearch/tntsearch.yaml',
+                'modified' => 1561704635
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
@@ -213,10 +281,26 @@ return [
                     ]
                 ]
             ],
+            'shortcode-core' => [
+                'enabled' => true,
+                'active' => true,
+                'active_admin' => true,
+                'admin_pages_only' => true,
+                'parser' => 'regular',
+                'custom_shortcodes' => NULL,
+                'fontawesome' => [
+                    'load' => true,
+                    'url' => '//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css',
+                    'v5' => false
+                ]
+            ],
             'pagination' => [
                 'enabled' => true,
                 'built_in_css' => true,
                 'delta' => 0
+            ],
+            'presentation-deckset' => [
+                'enabled' => true
             ],
             'feed' => [
                 'enabled' => true,
@@ -225,6 +309,93 @@ return [
                 'lang' => 'en-us',
                 'length' => 500,
                 'enable_json_feed' => false
+            ],
+            'git-sync' => [
+                'enabled' => true,
+                'folders' => [
+                    0 => 'pages'
+                ],
+                'sync' => [
+                    'on_save' => true,
+                    'on_delete' => true,
+                    'on_media' => true,
+                    'cron_enable' => false,
+                    'cron_at' => '0 12,23 * * *'
+                ],
+                'user' => 'admin',
+                'password' => '020594Claudia',
+                'webhook' => '/_git-sync-eff7067e98d4',
+                'webhook_enabled' => '0',
+                'webhook_secret' => '24d374595919e48faf24cd388f882804f63215df13250404',
+                'branch' => 'master',
+                'remote' => [
+                    'name' => 'origin',
+                    'branch' => 'master'
+                ],
+                'git' => [
+                    'author' => 'gituser',
+                    'message' => '(Grav GitSync) Automatic Commit',
+                    'name' => 'GitSync',
+                    'email' => 'git-sync@trilby.media',
+                    'bin' => 'git'
+                ],
+                'logging' => false
+            ],
+            'auto-date' => [
+                'enabled' => true
+            ],
+            'presentation' => [
+                'enabled' => true,
+                'theme' => 'moon',
+                'order' => [
+                    'by' => 'folder',
+                    'dir' => 'asc'
+                ],
+                'all_assets' => false,
+                'theme_css' => true,
+                'builtin_css' => true,
+                'builtin_js' => true,
+                'plugin_css' => true,
+                'plugin_js' => true,
+                'textsizing' => true,
+                'sync' => 'none',
+                'api_route' => 'presentationapi',
+                'poll_timeout' => 2000,
+                'poll_retry_limit' => 10,
+                'token_auth' => false,
+                'token' => 'Hd4HFdPvbpKzTqz',
+                'admin_async_save' => false,
+                'admin_async_save_typing' => false,
+                'footer' => '',
+                'transition' => true,
+                'shortcodes' => true,
+                'shortcode_classes' => 'presentation-iframe',
+                'shortcode_parser' => 'RegularParser',
+                'unwrap_images' => true,
+                'content' => 'Content',
+                'parser' => 'Parser',
+                'transport' => 'Transport',
+                'breakpoints' => [
+                    240 => '16',
+                    320 => '20',
+                    576 => '24',
+                    768 => '28',
+                    992 => '32',
+                    1200 => '36',
+                    1600 => '40'
+                ],
+                'options' => [
+                    'width' => '100%',
+                    'height' => '100%',
+                    'margin' => '0',
+                    'minScale' => '1',
+                    'maxScale' => '1',
+                    'transition' => 'fade',
+                    'controlsTutorial' => 'false',
+                    'history' => 'true',
+                    'display' => 'flex',
+                    'pdfSeparateFragments' => false
+                ]
             ],
             'simplesearch' => [
                 'enabled' => true,
@@ -248,6 +419,41 @@ return [
                 'words_per_minute' => 200,
                 'format' => '{minutes_short_count} {minutes_text}, {seconds_short_count} {seconds_text}',
                 'round' => 'seconds'
+            ],
+            'external_links' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'weight' => 0,
+                'exclude' => [
+                    'classes' => [
+                        0 => 'exclude'
+                    ],
+                    'domains' => NULL
+                ],
+                'links' => [
+                    'www' => false,
+                    'redirects' => false,
+                    'schemes' => [
+                        0 => 'http',
+                        1 => 'https',
+                        2 => 'ftp',
+                        3 => 'irc',
+                        4 => 'mailto',
+                        5 => 'news',
+                        6 => 'nntp',
+                        7 => 'rtsp',
+                        8 => 'sftp',
+                        9 => 'ssh',
+                        10 => 'tel',
+                        11 => 'telnet',
+                        12 => 'webcal'
+                    ]
+                ],
+                'process' => true,
+                'title' => false,
+                'no_follow' => true,
+                'target' => '_blank',
+                'mode' => 'active'
             ],
             'form' => [
                 'enabled' => true,
@@ -273,6 +479,19 @@ return [
                     'site_key' => NULL,
                     'secret_key' => NULL
                 ]
+            ],
+            'image-captions' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'entire_page' => false,
+                'scope' => 'img.caption',
+                'figure_class' => 'image-caption',
+                'figcaption_class' => NULL
+            ],
+            'page-inject' => [
+                'enabled' => true,
+                'active' => true,
+                'processed_content' => true
             ],
             'comments' => [
                 'enabled' => true,
@@ -362,9 +581,49 @@ return [
                     ]
                 ]
             ],
+            'markdown-notices' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'level_classes' => [
+                    0 => 'yellow',
+                    1 => 'red',
+                    2 => 'blue',
+                    3 => 'green'
+                ]
+            ],
+            'shortcode-ui' => [
+                'enabled' => true,
+                'theme' => [
+                    'tabs' => 'default'
+                ]
+            ],
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'youtube' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'add_editor_button' => true,
+                'player_parameters' => [
+                    'autoplay' => 0,
+                    'cc_load_policy' => 0,
+                    'color' => 'red',
+                    'controls' => 1,
+                    'disablekb' => 0,
+                    'enablejsapi' => 0,
+                    'fs' => 1,
+                    'hl' => '',
+                    'iv_load_policy' => 1,
+                    'loop' => 0,
+                    'modestbranding' => 0,
+                    'origin' => '',
+                    'playsinline' => 0,
+                    'rel' => 1,
+                    'showinfo' => 1,
+                    'vq' => 'default'
+                ],
+                'privacy_enhanced_mode' => false
             ],
             'taxonomylist' => [
                 'enabled' => true,
@@ -436,6 +695,16 @@ return [
                     'process' => false
                 ]
             ],
+            'breadcrumbs' => [
+                'enabled' => true,
+                'show_all' => true,
+                'built_in_css' => true,
+                'include_home' => true,
+                'include_current' => true,
+                'icon_home' => '',
+                'icon_divider_classes' => 'fa fa-angle-right',
+                'link_trailing' => false
+            ],
             'error' => [
                 'enabled' => true,
                 'routes' => [
@@ -469,6 +738,39 @@ return [
                 ],
                 'content_type' => 'text/html',
                 'debug' => false
+            ],
+            'tntsearch' => [
+                'enabled' => true,
+                'search_route' => '/search',
+                'query_route' => '/s',
+                'built_in_css' => true,
+                'built_in_js' => true,
+                'built_in_search_page' => true,
+                'enable_admin_page_events' => true,
+                'search_type' => 'auto',
+                'fuzzy' => false,
+                'phrases' => true,
+                'stemmer' => 'default',
+                'display_route' => true,
+                'display_hits' => true,
+                'display_time' => true,
+                'live_uri_update' => true,
+                'limit' => '20',
+                'min' => '3',
+                'snippet' => '300',
+                'index_page_by_default' => true,
+                'scheduled_index' => [
+                    'enabled' => false,
+                    'at' => '* * * * *',
+                    'logs' => 'logs/tntsearch-index.out'
+                ],
+                'filter' => [
+                    'items' => [
+                        0 => 'root@.descendants'
+                    ]
+                ],
+                'powered_by' => true,
+                'search_object_type' => 'Grav'
             ],
             'login' => [
                 'enabled' => true,
@@ -916,7 +1218,7 @@ node_modules'
                 2 => 'month'
             ],
             'metadata' => [
-                'description' => 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
+                'description' => 'My Grav Site'
             ],
             'summary' => [
                 'enabled' => true,
@@ -1238,6 +1540,56 @@ node_modules'
                 'social_twitter' => 'https://twitter.com/Claudia_SCe',
                 'social_facebook' => 'https://www.facebook.com/claudia.caicedo.7524',
                 'social_github' => 'https://github.com/claudiacaicedo'
+            ],
+            'quark-open-publishing' => [
+                'streams' => [
+                    'schemes' => [
+                        'theme' => [
+                            'type' => 'ReadOnlyStream',
+                            'prefixes' => [
+                                '' => [
+                                    0 => 'user/themes/quark-open-publishing',
+                                    1 => 'user/themes/quark'
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                'chromeless' => [
+                    'enabled' => false
+                ],
+                'display_of_git_sync_repo_link' => 'none',
+                'type_of_git_sync_repo_link' => 'view',
+                'h5pembedrootpath' => 'https://h5p.org/h5p/embed/',
+                'cc_license' => [
+                    'enabled' => false,
+                    'type' => 'ccby',
+                    'icon' => false
+                ],
+                'dropdown' => [
+                    'enabled' => false
+                ],
+                'displaycustommenus' => [
+                    'enabled' => false
+                ],
+                'hidehomemenulink' => false,
+                'production-mode' => false,
+                'header-fixed' => true,
+                'header-animated' => true,
+                'header-dark' => false,
+                'header-transparent' => true,
+                'sticky-footer' => true,
+                'blog-page' => '/blog',
+                'spectre' => [
+                    'exp' => false,
+                    'icons' => false
+                ]
+            ],
+            'receptar' => [
+                'enabled' => true,
+                'showchildpages' => [
+                    'enabled' => true
+                ]
             ]
         ]
     ]

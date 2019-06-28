@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/config/site.yaml',
-    'modified' => 1560796275,
+    'modified' => 1561586983,
     'data' => [
         'title' => 'Graficación & Animación',
         'default_lang' => 'es',
@@ -17,9 +17,6 @@ return [
             0 => 'category',
             1 => 'tag',
             2 => 'month'
-        ],
-        'metadata' => [
-            'description' => 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
         ],
         'summary' => [
             'enabled' => true,

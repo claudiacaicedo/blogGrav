@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1561571804,
-    'checksum' => '9dd4740263b01f41910d8ac1450a697b',
+    'timestamp' => 1561704639,
+    'checksum' => 'd958d24af033824933511f95bff658e0',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -167,6 +167,14 @@ return [
                 'file' => 'user/plugins/pagination/languages.yaml',
                 'modified' => 1560796275
             ],
+            'plugins/presentation-deckset' => [
+                'file' => 'user/plugins/presentation-deckset/languages.yaml',
+                'modified' => 1561704634
+            ],
+            'plugins/presentation' => [
+                'file' => 'user/plugins/presentation/languages.yaml',
+                'modified' => 1561704633
+            ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/languages.yaml',
                 'modified' => 1560796275
@@ -174,6 +182,10 @@ return [
             'plugins/readingtime' => [
                 'file' => 'user/plugins/readingtime/languages.yaml',
                 'modified' => 1561571803
+            ],
+            'plugins/external_links' => [
+                'file' => 'user/plugins/external_links/languages.yaml',
+                'modified' => 1561704629
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/languages.yaml',
@@ -198,6 +210,10 @@ return [
             'plugins/email' => [
                 'file' => 'user/plugins/email/languages.yaml',
                 'modified' => 1560796275
+            ],
+            'plugins/tntsearch' => [
+                'file' => 'user/plugins/tntsearch/languages.yaml',
+                'modified' => 1561704635
             ]
         ],
         'user/plugins/admin/languages' => [
@@ -1324,6 +1340,48 @@ Sie haben **2FA** für dieses Konto aktiviert. Bitte benutzen Sie Ihre **2FA** A
                 'SECONDS' => 'Sekunden',
                 'MINUTE' => 'Minute',
                 'MINUTES' => 'Minuten'
+            ],
+            'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'PLUGIN_NAME' => 'External Links',
+                    'PLUGIN_STATUS' => 'Plugin Status',
+                    'PLUGIN_STATUS_HELP' => 'Aktiviere das Plugin oder schalte es komplett ab.',
+                    'BUILTIN_CSS' => 'Verwende mitgeliefertes CSS',
+                    'WEIGHT' => 'Ausführungsreihenfolge',
+                    'SETTINGS' => 'Einstellungen',
+                    'CONTENT' => 'Inhalt',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Ausnahmen',
+                        'SECTION_HELP' => 'Setzt Links mit bestimmten Klassen oder Links von bestimmten Domains immer als intern.',
+                        'CLASSES' => 'Ignoriere Links mit diesen Klassen',
+                        'CLASSES_HELP' => 'Komma getrennte Liste',
+                        'DOMAINS' => 'Eine Liste von auszuschließenden Domains',
+                        'DOMAINS_HELP' => 'Komma getrennte Liste von Domains z.B. _localhost/*_ (jeder regulärer Ausdruck kann verwendet werden)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Links',
+                        'SECTION_HELP' => 'Sieht Links beginnend mit <code>www.</code> oder mit als extern markierten Protokollen als extern an.',
+                        'WWW' => 'Verlinkung (WWW)',
+                        'WWW_HELP' => 'Verlinke auch Links, die mit \'www.\' beginnen als extern',
+                        'REDIRECTS' => 'Folge Seiten-Weiterleitungen',
+                        'REDIRECTS_HELP' => 'Links zu Seiten, die zu einer externen URL weiterleiten werden auch als extern markiert',
+                        'SCHEMES' => 'Erlaubte Protokolle',
+                        'SCHEMES_HELP' => 'Liste von erlaubten Protokollen'
+                    ],
+                    'PROCESS' => 'Aktiviere <code>External Links</code> auf Seite',
+                    'TITLE' => 'Zeige Standardtexttitel für externe Links',
+                    'TITLE_MESSAGE' => 'Dieser Link führt auf eine externe Webseite für deren Inhalt wir nicht verantwortlich sind.',
+                    'NO_FOLLOW' => 'Fügt <code>rel="nofollow"</code> zu allen externen Links',
+                    'TARGET' => 'Setze "target" Attribut des Links.',
+                    'TARGET_BLANK' => '_blank - Öffne Link im neuen Fenster',
+                    'TARGET_SELF' => '_self - Öffne Link im gleichen Tab oder Seite',
+                    'TARGET_PARENT' => '_parent - Öffne Link im Elternfenster',
+                    'TARGET_TOP' => '_top - Öffne Link im ganzen Fenster',
+                    'MODE' => 'Modus',
+                    'MODE_HELP' => 'active = Zeichne externe Links aus; passive = Zeichne externe Links aus ohne entsprechende CSS-Klassen zu setzen',
+                    'MODE_ACTIVE' => 'Aktiv - Zeichne externe Links aus',
+                    'MODE_PASSIVE' => 'Passiv - Zeichne externe Links aus ohne entsprechende CSS-Klassen zu setzen'
+                ]
             ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formularwerte nicht gültig. Für ein oder mehrere erforderliche Felder fehlen Werte.',
@@ -2573,6 +2631,291 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'BUILTIN_CSS' => 'Use built in CSS',
                 'BUILTIN_CSS_HELP' => 'Include the CSS provided by the Pagination plugin'
             ],
+            'PLUGIN_PRESENTATION_PLUGIN_DECKSET' => [
+                'TEXT_VARIABLE' => 'Text Variable',
+                'TEXT_VARIABLE_HELP' => 'Text to add to the top of a page'
+            ],
+            'PLUGIN_PRESENTATION' => [
+                'ADMIN' => [
+                    'COMMON' => [
+                        'TITLE' => 'Presentation',
+                        'INITIAL' => 'Initial',
+                        'INHERIT' => 'Inherit',
+                        'NONE' => 'None',
+                        'KEY' => 'Key',
+                        'VALUE' => 'Value',
+                        'ORDER' => [
+                            'BY' => [
+                                'LABEL' => 'Order By',
+                                'HELP' => 'Type to order pages by',
+                                'OPTIONS' => [
+                                    'DEFAULT' => 'Default - based on folder name',
+                                    'FOLDER' => 'Folder - based on prefix-less folder name',
+                                    'TITLE' => 'Title - based on title field in header',
+                                    'DATE' => 'Date - based on date field in header'
+                                ]
+                            ],
+                            'DIR' => [
+                                'LABEL' => 'Order Direction',
+                                'HELP' => 'Direction to order pages',
+                                'OPTIONS' => [
+                                    'ASC' => 'Ascending',
+                                    'DESC' => 'Descending'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'TABS' => [
+                        'OPTIONS' => 'Options'
+                    ],
+                    'LINKS' => [
+                        'VIEW' => 'Present',
+                        'VIEW_NOTES' => 'Present with Notes',
+                        'SPEAKER' => 'Speaker View',
+                        'SPEAKER_NOTES' => 'Speaker View with Notes',
+                        'PRINT' => 'Print',
+                        'PRINT_NOTES' => 'Print with Notes',
+                        'PRINT_STYLED' => 'Print with Theme',
+                        'PRINT_STYLED_NOTES' => 'Print with Theme and Notes'
+                    ],
+                    'OPTIONS' => [
+                        'CLASS' => [
+                            'LABEL' => 'Class(es)',
+                            'HELP' => 'Classes to add to the Slide'
+                        ],
+                        'HORIZONTAL' => [
+                            'LABEL' => 'Stack slides',
+                            'HELP' => 'Transform slides from vertical to horizontal layout',
+                            'DESCRIPTION' => 'Stack slides horizontally or vertically (default), on thematic breaks.',
+                            'OPTIONS' => [
+                                'HORIZONTAL' => 'Horizontally',
+                                'VERTICAL' => 'Vertically'
+                            ]
+                        ],
+                        'ASSETS' => [
+                            'ALL' => [
+                                'LABEL' => 'Load all assets',
+                                'DESCRIPTION' => 'Load all registered CSS and JS from Grav into presentation.html.twig\'s assets'
+                            ],
+                            'THEME' => [
+                                'LABEL' => 'Theme',
+                                'DESCRIPTION' => 'Reveal.js theme to use.'
+                            ],
+                            'THEME_CSS' => [
+                                'LABEL' => 'Use Theme\'s CSS',
+                                'DESCRIPTION' => 'Import current theme\'s /css/custom.css into presentation.html.twig\'s assets'
+                            ],
+                            'BUILTIN_CSS' => [
+                                'LABEL' => 'Use Plugin\'s CSS'
+                            ],
+                            'BUILTIN_JS' => [
+                                'LABEL' => 'Use Plugin\'s JS'
+                            ]
+                        ],
+                        'TEXTSIZE' => [
+                            'TITLE' => 'Font Sizing',
+                            'SCALE' => [
+                                'LABEL' => 'Font scale',
+                                'DESCRIPTION' => 'Use a modular, harmonious, scale to proportionally determine the size of header elements from the calculated base font size (derived from breakpoints).'
+                            ],
+                            'MODIFIER' => [
+                                'LABEL' => 'Font size modifier',
+                                'DESCRIPTION' => 'Multiplies the calculated font size by this amount, lower numbers yield smaller base font sizes, and vice versa.'
+                            ]
+                        ]
+                    ],
+                    'DEFAULTS' => [
+                        'TITLE' => 'Style Defaults'
+                    ],
+                    'SYNC' => [
+                        'TITLE' => 'Synchronization',
+                        'SYNC' => [
+                            'LABEL' => 'Sync',
+                            'DESCRIPTION' => 'Sync locally using browser, or remotely using API.',
+                            'OPTIONS' => [
+                                'NONE' => 'None (disabled)',
+                                'BROWSER' => 'Locally (Browser)',
+                                'API' => 'Remotely (API)'
+                            ]
+                        ],
+                        'API_ROUTE' => [
+                            'LABEL' => 'API Route',
+                            'DESCRIPTION' => 'Route for API-access.'
+                        ],
+                        'POLL_TIMEOUT' => [
+                            'LABEL' => 'Poll Timeout',
+                            'DESCRIPTION' => 'Milliseconds to wait between each API-query.'
+                        ],
+                        'POLL_RETRY_LIMIT' => [
+                            'LABEL' => 'Poll Retry Limit',
+                            'DESCRIPTION' => 'Number of times to retry on error before cancelling API-querying.'
+                        ],
+                        'TOKEN_AUTH' => [
+                            'LABEL' => 'Token Auth',
+                            'DESCRIPTION' => 'Require a token for Admin-access.'
+                        ],
+                        'TOKEN' => [
+                            'LABEL' => 'Token',
+                            'DESCRIPTION' => 'Token to use for authorization.'
+                        ]
+                    ],
+                    'STYLE' => [
+                        'TITLE' => 'Design',
+                        'FONT' => [
+                            'HEADER' => [
+                                'LABEL' => 'Heading Font-Family',
+                                'DESCRIPTION' => 'CSS Font-Family to use for headings.'
+                            ],
+                            'HEADER_COLOR' => [
+                                'LABEL' => 'Heading Text Color',
+                                'DESCRIPTION' => 'CSS Color to use for headings.'
+                            ],
+                            'BLOCK' => [
+                                'LABEL' => 'Block Font-Family',
+                                'DESCRIPTION' => 'CSS Font-Family to use for block-text.'
+                            ],
+                            'BLOCK_COLOR' => [
+                                'LABEL' => 'Block Text Color',
+                                'DESCRIPTION' => 'CSS Color to use for block-text.'
+                            ]
+                        ],
+                        'BACKGROUND-COLOR' => [
+                            'LABEL' => 'Background Color'
+                        ],
+                        'BACKGROUND-IMAGE' => [
+                            'LABEL' => 'Background Image',
+                            'DESCRIPTION' => 'Image from user/pages/images to use as default.'
+                        ],
+                        'BACKGROUND-SIZE' => [
+                            'LABEL' => 'Background Size',
+                            'OPTIONS' => [
+                                'AUTO' => 'Auto',
+                                'COVER' => 'Cover',
+                                'CONTAIN' => 'Contain'
+                            ]
+                        ],
+                        'BACKGROUND-REPEAT' => [
+                            'LABEL' => 'Background Repeat',
+                            'OPTIONS' => [
+                                'NO-REPEAT' => 'No repeat',
+                                'REPEAT' => 'Repeat both',
+                                'REPEAT-X' => 'Repeat horizontally',
+                                'REPEAT-Y' => 'Repeat vertically',
+                                'SPACE' => 'Repeat without clipping',
+                                'ROUND' => 'Repeat and stretch'
+                            ]
+                        ],
+                        'JUSTIFY-CONTENT' => [
+                            'LABEL' => 'Vertical Alignment',
+                            'HELP' => 'Vertical alignment of elements in slide (using justify-content)',
+                            'OPTIONS' => [
+                                'CENTER' => 'Center',
+                                'START' => 'Start',
+                                'END' => 'End',
+                                'FLEX-START' => 'Flex-start',
+                                'FLEX-END' => 'Flex-end',
+                                'LEFT' => 'Left',
+                                'RIGHT' => 'Right',
+                                'NORMAL' => 'Normal',
+                                'SPACE-BETWEEN' => 'Space-between',
+                                'SPACE-AROUND' => 'Space-around',
+                                'SPACE-EVENLY' => 'Space-evenly',
+                                'STRETCH' => 'Stretch'
+                            ]
+                        ],
+                        'ALIGN-ITEMS' => [
+                            'LABEL' => 'Horizontal Alignment',
+                            'HELP' => 'Horizontal alignment of elements in slide (using align-items)',
+                            'OPTIONS' => [
+                                'CENTER' => 'Center',
+                                'START' => 'Start',
+                                'END' => 'End',
+                                'FLEX-START' => 'Flex-start',
+                                'FLEX-END' => 'Flex-end',
+                                'SELF-START' => 'Self-start',
+                                'SELF-END' => 'Self-end',
+                                'NORMAL' => 'Normal',
+                                'BASELINE' => 'Baseline',
+                                'FIRST-BASELINE' => 'First Baseline',
+                                'LAST-BASELINE' => 'Last Baseline'
+                            ]
+                        ]
+                    ],
+                    'ADVANCED' => [
+                        'TITLE' => 'Advanced',
+                        'TAB_TITLE' => 'Presentation Plugin API Options',
+                        'SAVE' => [
+                            'PREFIX' => 'Last Saved',
+                            'ASYNC' => [
+                                'LABEL' => 'Save Presentation',
+                                'DESCRIPTION' => 'Enable Save Presentation button.'
+                            ],
+                            'TYPING' => [
+                                'LABEL' => 'Save Content while typing',
+                                'DESCRIPTION' => 'Automatically save Presentation when typing.'
+                            ]
+                        ],
+                        'FOOTER' => [
+                            'LABEL' => 'Inject Twig-footer',
+                            'DESCRIPTION' => 'Render a theme\'s Twig-template and append it to each section, eg. \'partials/presentation_footer.html.twig\'.'
+                        ],
+                        'TEXTSIZING' => [
+                            'LABEL' => 'Enable Textsizing'
+                        ],
+                        'BREAKPOINTS' => [
+                            'LABEL' => 'Breakpoints',
+                            'DESCRIPTION' => 'Each breakpoint has an associated Width, at which the Font Size is applied to the Slide.',
+                            'WIDTH' => [
+                                'LABEL' => 'Width'
+                            ],
+                            'FONT_SIZE' => [
+                                'LABEL' => 'Font Size'
+                            ]
+                        ],
+                        'SHORTCODES' => [
+                            'LABEL' => 'Shortcodes',
+                            'DESCRIPTION' => 'Enables internal shortcode-processing.'
+                        ],
+                        'SHORTCODE_CLASSES' => [
+                            'LABEL' => 'Shortcode Classes',
+                            'DESCRIPTION' => 'Default Classes to use with Presentation-shortcodes, each separated by a space.'
+                        ],
+                        'SHORTCODE_PARSER' => [
+                            'LABEL' => 'Shortcode Parser',
+                            'DESCRIPTION' => 'Processor to use for Shortcode parsing: RegularParser, RegexParser, or WordpressParser',
+                            'OPTIONS' => [
+                                'REGULAR' => 'RegularParser',
+                                'REGEX' => 'RegexParser',
+                                'WORDPRESS' => 'WordpressParser'
+                            ]
+                        ],
+                        'TRANSITION' => [
+                            'LABEL' => 'OnLoad Transition',
+                            'DESCRIPTION' => 'Fade in from white when page (DOM-structure) is ready.'
+                        ],
+                        'UNWRAP_IMAGES' => [
+                            'LABEL' => 'Unwrap Images',
+                            'DESCRIPTION' => 'Unwrap images from paragraphs.'
+                        ],
+                        'CONTENT' => [
+                            'LABEL' => 'Content',
+                            'DESCRIPTION' => 'Use a custom aggregator for content.'
+                        ],
+                        'PARSER' => [
+                            'LABEL' => 'Parser',
+                            'DESCRIPTION' => 'Use a custom parser for content.'
+                        ],
+                        'STYLES' => [
+                            'LABEL' => 'Transport',
+                            'DESCRIPTION' => 'Use a custom getter/setter for transporting data.'
+                        ],
+                        'REVEAL' => [
+                            'TITLE' => 'Reveal.js Options',
+                            'LABEL' => 'Settings to pass to Reveal.js.'
+                        ]
+                    ]
+                ]
+            ],
             'PLUGIN_SIMPLESEARCH' => [
                 'SEARCH_PLACEHOLDER' => 'Search …',
                 'SEARCH_RESULTS' => 'Search Results',
@@ -2585,6 +2928,48 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'SECONDS' => 'seconds',
                 'MINUTE' => 'minute',
                 'MINUTES' => 'minutes'
+            ],
+            'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'PLUGIN_NAME' => 'External Links',
+                    'PLUGIN_STATUS' => 'Plugin status',
+                    'STATUS_HELP' => 'Set to false to disable this plugin completely.',
+                    'BUILTIN_CSS' => 'Use built in CSS',
+                    'WEIGHT' => 'Order of execution',
+                    'SETTINGS' => 'Settings',
+                    'CONTENT' => 'Content',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Exclusion',
+                        'SECTION_HELP' => 'Exclude links with a specific class or domains from being recognized as external links.',
+                        'CLASSES' => 'Exclude all links with this class',
+                        'CLASSES_HELP' => 'Comma separated list.',
+                        'DOMAINS' => 'A list of domains to be excluded',
+                        'DOMAINS_HELP' => 'Comma separated list of domains e.g. _localhost/*_  (any regular expression can be used)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Links',
+                        'SECTION_HELP' => 'Set links starting with <code>www.</code> and within the list of allowed schemes as external.',
+                        'WWW' => 'Link WWW',
+                        'WWW_HELP' => 'Automatically link any hostname that starts with \'www.\' as external',
+                        'REDIRECTS' => 'Follow Page redirects',
+                        'REDIRECTS_HELP' => 'Also mark links as external, that link to pages that redirect to an external URL',
+                        'SCHEMES' => 'Allowed schemes',
+                        'SCHEMES_HELP' => 'List of allowed schemes'
+                    ],
+                    'PROCESS' => 'Filter external links on the page',
+                    'TITLE' => 'Show default title for external links',
+                    'TITLE_MESSAGE' => 'This link will take you to an external web site. We are not responsible for their content.',
+                    'NO_FOLLOW' => 'Add <code>rel="nofollow"</code> to all external links',
+                    'TARGET' => 'Set target attribute of the link.',
+                    'TARGET_BLANK' => '_blank | Load in a new window',
+                    'TARGET_SELF' => '_self | Load in the same frame as it was clicked',
+                    'TARGET_PARENT' => '_parent | Load in the parent frameset',
+                    'TARGET_TOP' => '_top | Load in the full body of the window',
+                    'MODE' => 'Mode',
+                    'MODE_HELP' => 'active = process and parse all links; passive = parse links, but don\'t set CSS classes',
+                    'MODE_ACTIVE' => 'Active - Process and parse all links',
+                    'MODE_PASSIVE' => 'Passive - Parse links, but don\'t set CSS classes'
+                ]
             ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Form not validated. One or more required fields are missing.',
@@ -2766,6 +3151,10 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'QUEUE_FLUSH_MSG_LIMIT_APPEND' => 'Messages',
                 'QUEUE_FLUSH_TIME_LIMIT' => 'Flush time limit',
                 'QUEUE_FLUSH_TIME_LIMIT_APPEND' => 'Seconds'
+            ],
+            'PLUGIN_TNTSEARCH' => [
+                'FOUND_RESULTS' => 'Found %s results',
+                'FOUND_IN' => 'in <span>%s</span>'
             ],
             'GRAV' => [
                 'FRONTMATTER_ERROR_PAGE' => '---
@@ -4974,6 +5363,48 @@ L\'**authentification à deux facteurs** est activée sur ce compte. Veuillez ut
                 'SECONDS' => 'secondes',
                 'MINUTE' => 'minute',
                 'MINUTES' => 'minutes'
+            ],
+            'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'PLUGIN_NAME' => 'Liens externes',
+                    'PLUGIN_STATUS' => 'Statut du plugin',
+                    'STATUS_HELP' => 'Régler sur false pour désactiver complètement le plugin.',
+                    'BUILTIN_CSS' => 'Utiliser les CSS intégrés',
+                    'WEIGHT' => 'Ordre d’exécution',
+                    'SETTINGS' => 'Configuration',
+                    'CONTENT' => 'Contenu',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Exclusion',
+                        'SECTION_HELP' => 'Exclure les liens avec des classes spécifiques ou des domaines comme étant reconnus comme liens externes.',
+                        'CLASSES' => 'Exclure tous les liens avec cette classe',
+                        'CLASSES_HELP' => 'Liste des classes séparées par des virgules.',
+                        'DOMAINS' => 'Une liste des domaines à exclure',
+                        'DOMAINS_HELP' => 'Liste des domaines séparés par des virgules ex : _localhost/*_  (les expressions régulières peuvent être utilisées)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Liens',
+                        'SECTION_HELP' => 'Définir les liens commençant par <code>www.</code> et ceux de la liste des schémas définis comme étant des liens externes.',
+                        'WWW' => 'Liens WWW',
+                        'WWW_HELP' => 'Reconnaître automatiquement tout lien commencant par \'www.\' comme étant un lien externe.',
+                        'REDIRECTS' => 'Follow Page redirects',
+                        'REDIRECTS_HELP' => 'Also mark links as external, that link to pages that redirect to an external URL',
+                        'SCHEMES' => 'Schémas autorisés',
+                        'SCHEMES_HELP' => 'Liste des schémas autorisés'
+                    ],
+                    'PROCESS' => 'Filtrer les liens externes de la page',
+                    'TITLE' => 'Afficher le titre par défaut pour les liens externes',
+                    'TITLE_MESSAGE' => 'Ce lien va vous diriger vers un site externe. Nous ne sommes pas responsables de son contenu.',
+                    'NO_FOLLOW' => 'Ajouter <code>rel="nofollow"</code> à tous les liens externes',
+                    'TARGET' => 'Spécifier la cible dans laquelle le contenu du lien doit s\'afficher.',
+                    'TARGET_BLANK' => '_blank | Afficher dans une nouvelle fenêtre',
+                    'TARGET_SELF' => '_self | Afficher dans la même fenêtre',
+                    'TARGET_PARENT' => '_parent | Afficher dans le cadre parent (frame)',
+                    'TARGET_TOP' => '_top | Afficher dans le cadre racine',
+                    'MODE' => 'Mode',
+                    'MODE_HELP' => 'actif = analyser et procéder pour tous les liens; passif = analyser les liens mais ne pas appliquer les classes CSS',
+                    'MODE_ACTIVE' => 'Actif - Analyser et procéder pour tous les liens',
+                    'MODE_PASSIVE' => 'Passif - Analyser les liens mais ne pas appliquer les classes CSS'
+                ]
             ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formulaire non validé. Un ou plusieurs champs obligatoires sont manquants.',
@@ -9850,6 +10281,48 @@ Calea: `%2$s`
                 'SEARCH_RESULTS_SUMMARY_SINGULAR' => 'По запросу: <strong>%s</strong> результатов найдено 1',
                 'SEARCH_RESULTS_SUMMARY_PLURAL' => 'По запросу: <strong>%s</strong> результатов найдено %s',
                 'SEARCH_FIELD_MINIMUM_CHARACTERS' => 'Добавьте не менее %s символов'
+            ],
+            'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'PLUGIN_NAME' => 'Внешние ссылки',
+                    'PLUGIN_STATUS' => 'Статус плагина',
+                    'STATUS_HELP' => 'Установите нет, чтобы отключить этот плагин полностью.',
+                    'BUILTIN_CSS' => 'Использовать встроенные CSS',
+                    'WEIGHT' => 'Порядок выполнения',
+                    'SETTINGS' => 'Настройки',
+                    'CONTENT' => 'Контент',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Исключения',
+                        'SECTION_HELP' => 'Исключить ссылки с определенным классом или домены, которые не признаются в качестве внешних ссылок.',
+                        'CLASSES' => 'Исключить все ссылки с этим классом',
+                        'CLASSES_HELP' => 'Список разделенных запятыми.',
+                        'DOMAINS' => 'Список доменов, которые будут исключены',
+                        'DOMAINS_HELP' => 'Разделенный запятыми список доменов, например, _localhost / * _ (любое регулярное выражение может быть использовано)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Ссылки',
+                        'SECTION_HELP' => 'Установить ссылки, начинающиеся с <code>www.</code>? и список разрешенных схем, как внешние.',
+                        'WWW' => 'Ссылка WWW',
+                        'WWW_HELP' => 'Автоматически связывать любое имя хоста, которое начинается с \'www\'. как внешние',
+                        'REDIRECTS' => 'Follow Page redirects',
+                        'REDIRECTS_HELP' => 'Also mark links as external, that link to pages that redirect to an external URL',
+                        'SCHEMES' => 'Допустимые схемы',
+                        'SCHEMES_HELP' => 'Список допустимых схем'
+                    ],
+                    'PROCESS' => 'Фильтр внешних ссылок на странице',
+                    'TITLE' => 'Показать название по умолчанию для внешних ссылок',
+                    'TITLE_MESSAGE' => 'Эта ссылка приведет вас на внешний веб-сайт. Мы не несем ответственности за его содержание.',
+                    'NO_FOLLOW' => 'Добавить <code>rel="nofollow"</code> ко всем внешним ссылкам',
+                    'TARGET' => 'Установить целевой атрибут ссылки.',
+                    'TARGET_BLANK' => '_blank | Загрузка в новом окне',
+                    'TARGET_SELF' => '_self | Загрузка в том же фрейме где и был сделан клик',
+                    'TARGET_PARENT' => '_parent | Загрузка в родительском наборе фреймов',
+                    'TARGET_TOP' => '_top | Загрузка в отдельном окне браузера',
+                    'MODE' => 'Режим',
+                    'MODE_HELP' => 'активный = обработка и разбор всех ссылок; пассивный = вставлять ссылки, но не устанавливать для них CSS',
+                    'MODE_ACTIVE' => 'Активный = обработка и разбор всех ссылок',
+                    'MODE_PASSIVE' => 'Пассивный = вставлять ссылки, но не устанавливать для них CSS'
+                ]
             ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Форма не подтверждена. Отсутствует одно или несколько обязательных полей.',

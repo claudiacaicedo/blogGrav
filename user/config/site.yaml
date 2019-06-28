@@ -10,8 +10,6 @@ taxonomies:
   - category
   - tag
   - month
-metadata:
-  description: 'Receptar is a minimal Theme designed for blogger, converted to Grav.'
 summary:
   enabled: true
   format: short
