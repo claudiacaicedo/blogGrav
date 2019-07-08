@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/readingtime/readingtime.yaml',
-    'modified' => 1561571803,
+    'modified' => 1562014959,
     'data' => [
         'enabled' => true,
         'words_per_minute' => 200,

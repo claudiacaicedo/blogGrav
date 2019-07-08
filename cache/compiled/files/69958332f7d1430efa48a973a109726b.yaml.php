@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/external_links/external_links.yaml',
-    'modified' => 1561704629,
+    'modified' => 1562014959,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,

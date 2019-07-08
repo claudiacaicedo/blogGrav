@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/readingtime/blueprints.yaml',
-    'modified' => 1561571803,
+    'modified' => 1562014959,
     'data' => [
         'name' => 'Reading Time',
         'version' => '1.3.0',

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/auto-date/blueprints.yaml',
-    'modified' => 1561704627,
+    'modified' => 1562014959,
     'data' => [
         'name' => 'Auto Date',
         'version' => '1.0.2',

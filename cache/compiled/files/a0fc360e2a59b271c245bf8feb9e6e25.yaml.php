@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/admin/languages/nl.yaml',
-    'modified' => 1561571065,
+    'modified' => 1562014959,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Dit is een bèta versie! Gebruik in een productieomgeving is op eigen risico...',

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/config/themes/casper.yaml',
-    'modified' => 1561572363,
+    'modified' => 1562014959,
     'data' => [
         'enabled' => true,
         'dropdown' => [

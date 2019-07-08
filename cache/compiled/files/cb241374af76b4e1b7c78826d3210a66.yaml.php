@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/shortcode-ui/blueprints.yaml',
-    'modified' => 1561704637,
+    'modified' => 1562014959,
     'data' => [
         'name' => 'Shortcode UI',
         'version' => '2.3.0',

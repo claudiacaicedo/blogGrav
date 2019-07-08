@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/plugins/page-inject/blueprints.yaml',
-    'modified' => 1561704632,
+    'modified' => 1562014959,
     'data' => [
         'name' => 'Page Inject',
         'version' => '1.3.1',

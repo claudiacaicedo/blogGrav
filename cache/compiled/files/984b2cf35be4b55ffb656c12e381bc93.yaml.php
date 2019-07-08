@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://git-sync/git-sync.yaml',
-    'modified' => 1561704630,
+    'modified' => 1562014959,
     'data' => [
         'enabled' => true
     ]

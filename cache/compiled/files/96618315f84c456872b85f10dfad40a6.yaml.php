@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/usr/share/nginx/html/user/config/site.yaml',
-    'modified' => 1561586983,
+    'modified' => 1562014959,
     'data' => [
         'title' => 'Graficación & Animación',
         'default_lang' => 'es',
